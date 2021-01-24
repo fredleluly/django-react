@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'leads.apps.LeadsConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'django_react.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+    }
 
 TEMPLATES = [
     {
